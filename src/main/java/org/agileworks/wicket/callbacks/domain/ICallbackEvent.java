@@ -8,13 +8,23 @@ import org.apache.wicket.IClusterable;
 
 /**
  * @author tajzich
- * 
+ *
+ * Basic event interface, see implementations
+ *
  */
 public interface ICallbackEvent extends IClusterable {
 
+    /**
+     *
+     * @return true if event is already processed
+     */
 	boolean isProcessed();
 
 	void markProcessed();
 
+    /**
+     *
+     * @return component which fired the event
+     */
 	Component getSource();
 }

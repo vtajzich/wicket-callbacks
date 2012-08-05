@@ -14,7 +14,7 @@ import org.apache.wicket.util.visit.IVisitor;
  * @author tajzich
  *
  */
-public class BroadcastVisitor implements IVisitor<Component, Object> {
+public final class BroadcastVisitor implements IVisitor<Component, Object> {
 
 	private final IBroadcastCallbackEvent event;
 
@@ -23,7 +23,7 @@ public class BroadcastVisitor implements IVisitor<Component, Object> {
 	}
 
     @Override
-    public void component(Component component, IVisit iVisit) {
+    public final void component(Component component, IVisit iVisit) {
 
         if (component instanceof IBroadcastCallbackAware) {
             ((IBroadcastCallbackAware) component).onBroadcastCallBack(event);

@@ -17,6 +17,9 @@ import java.util.Map;
 
 /**
  * @author tajzich
+ *
+ * every panel for callback enabled application should extend this class or implement {@link ICallbackAware} and {@link IBroadcastCallbackAware} for broadcast support.
+ *
  */
 public abstract class AbstractPanel<T> extends Panel implements IBroadcastCallbackAware, IMappingCallbackAware {
 

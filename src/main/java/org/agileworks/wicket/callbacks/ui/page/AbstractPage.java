@@ -9,12 +9,28 @@ import org.agileworks.wicket.callbacks.ui.ApplicationVersion;
 
 import org.apache.wicket.Application;
 import org.apache.wicket.markup.html.WebPage;
+import org.apache.wicket.model.IModel;
+import org.apache.wicket.request.mapper.parameter.PageParameters;
 
+/**
+ * Every page for callback enabled application must extend this class
+ */
 public abstract class AbstractPage extends WebPage implements ITopCallbackAware {
 
 	private final ITopCallbackAware callbackAware = new TopCallbackAware(this);
 
-	@Override
+    protected AbstractPage() {
+    }
+
+    protected AbstractPage(IModel<?> model) {
+        super(model);
+    }
+
+    protected AbstractPage(PageParameters parameters) {
+        super(parameters);
+    }
+
+    @Override
 	public final void add(ICallback<?> callBack) {
 		callbackAware.add(callBack);
 	}
@@ -47,6 +63,7 @@ public abstract class AbstractPage extends WebPage implements ITopCallbackAware 
 	 * @return application version, and SCM revision
 	 */
 	public String getPageTitle() {
+
 		if (!isDevelopmentMode()) {
 			return "";
 		}

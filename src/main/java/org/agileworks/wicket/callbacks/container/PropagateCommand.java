@@ -3,17 +3,17 @@
  */
 package org.agileworks.wicket.callbacks.container;
 
-import java.io.Serializable;
-import java.util.Iterator;
-
 import org.apache.wicket.Component;
 import org.apache.wicket.MarkupContainer;
+
+import java.io.Serializable;
+import java.util.Iterator;
 
 /**
  * @author tajzich, bednar
  * 
  */
-public class PropagateCommand implements Serializable {
+public final class PropagateCommand implements Serializable {
 
 	private static final long serialVersionUID = 41055023244464399L;
 

@@ -10,7 +10,9 @@ import org.apache.wicket.ajax.AjaxRequestTarget;
 
 /**
  * @author tajzich
- * 
+ *
+ * Ajax event should extend this class
+ *
  */
 public class AjaxCallbackEvent extends AbstractCallbackEvent implements IAjaxCallbackEvent {
 
@@ -28,7 +30,7 @@ public class AjaxCallbackEvent extends AbstractCallbackEvent implements IAjaxCal
 
 	/** {@inheritDoc} */
 	@Override
-	public AjaxRequestTarget getAjaxRequestTarget() {
+	public final AjaxRequestTarget getAjaxRequestTarget() {
 		return ajaxRequestTarget;
 	}
 

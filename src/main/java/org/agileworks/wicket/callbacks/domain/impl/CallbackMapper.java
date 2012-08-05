@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-public class CallbackMapper implements Serializable {
+public final class CallbackMapper implements Serializable {
 
 	private static final long serialVersionUID = 7755328360051245624L;
 	private final IMappingCallbackAware mappingCallbackAware;

@@ -10,7 +10,9 @@ import org.apache.wicket.Component;
 
 /**
  * @author tajzich
- * 
+ *
+ * Non ajax event should extend this class. For ajax events see {@link AjaxCallbackEvent}
+ *
  */
 public abstract class AbstractCallbackEvent implements ICallbackEvent {
 

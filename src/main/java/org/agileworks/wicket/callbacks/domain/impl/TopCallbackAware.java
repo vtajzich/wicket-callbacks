@@ -5,7 +5,7 @@ import org.agileworks.wicket.callbacks.domain.ITopCallbackAware;
 
 import org.apache.wicket.MarkupContainer;
 
-public class TopCallbackAware extends CallbackAware implements ITopCallbackAware {
+public final class TopCallbackAware extends CallbackAware implements ITopCallbackAware {
 
 	private static final long serialVersionUID = 1171121876756049607L;
 

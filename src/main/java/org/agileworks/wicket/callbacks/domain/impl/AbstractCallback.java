@@ -12,7 +12,9 @@ import org.slf4j.LoggerFactory;
 
 /**
  * @author tajzich
- * 
+ *
+ * Custom callbacks should extend this class
+ *
  */
 public abstract class AbstractCallback<T extends ICallbackEvent> implements ICallback<T> {
 
@@ -44,10 +46,14 @@ public abstract class AbstractCallback<T extends ICallbackEvent> implements ICal
 	}
 
 	@Override
-	public void setParent(ICallbackAware callbackAware) {
+	public final void setParent(ICallbackAware callbackAware) {
 		this.parent = callbackAware;
 	}
 
+    /**
+     * do custom logic for supported events
+     * @param event an event
+     */
 	protected abstract void doCallBack(T event);
 
 	@SuppressWarnings("unchecked")
@@ -60,13 +66,13 @@ public abstract class AbstractCallback<T extends ICallbackEvent> implements ICal
 		return null;
 	}
 
-	private boolean isSupported(ICallbackEvent event) {
+	protected boolean isSupported(ICallbackEvent event) {
 
 		return supported.isAssignableFrom(event.getClass());
 	}
 
 	@Override
-	public ICallbackAware getParent() {
+	public final ICallbackAware getParent() {
 		return parent;
 	}
 }
