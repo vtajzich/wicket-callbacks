@@ -3,7 +3,8 @@
  */
 package org.agileworks.wicket.callbacks.domain;
 
-import org.apache.wicket.IClusterable;
+
+import org.apache.wicket.util.io.IClusterable;
 
 /**
  * @author tajzich

@@ -1,6 +1,7 @@
 package org.agileworks.wicket.callbacks.domain;
 
-import org.apache.wicket.IClusterable;
+
+import org.apache.wicket.util.io.IClusterable;
 
 /**
  * Implementor class is responsible for Callback processing
