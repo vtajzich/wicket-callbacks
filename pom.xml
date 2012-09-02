@@ -4,7 +4,7 @@
   <groupId>org.agileworks.wicket</groupId>
   <artifactId>wicket-callbacks</artifactId>
   <packaging>jar</packaging>
-  <version>1.5.0-SNAPSHOT</version>
+  <version>1.5.0</version>
   <name>wicket-callbacks</name>
   <description>Wicket adavnced events processing</description>
   <properties>
